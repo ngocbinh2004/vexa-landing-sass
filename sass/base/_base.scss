@@ -1,0 +1,64 @@
+// reset css 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; // border-box
+  font-family: "Poppins", sans-serif;
+}
+
+// chiều dài thẻ  = chiều dài nội dung (25%) + padding + border 
+// chiều dài thẻ (25%) = chiều dài nội dung + padding + border
+// width: 25%
+// flex 
+// padding : 10px;
+
+// 25% + 20px ==> 100%
+h1,
+h2,
+h3 {
+  font-family: "Aclonica",
+    sans-serif;
+}
+
+// container
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media screen and (max-width : 1199px) {
+    max-width: 960px;
+  }
+}
+
+.container-section {
+  max-width: 1320px;
+  margin: 0 auto;
+
+  @media screen and (max-width : 1199px) {
+    max-width: 960px;
+  }
+}
+
+body {
+  background-color: $color-black-themes;
+  color: $color-white-themes;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 80px 0;
+}
+
+button {
+  border: unset;
+  background-color: unset;
+}
+
+h2 {
+  font-size: $fs-h2;
+
+  @media screen and (max-width : 1024px) {
+    font-size: 48px;
+  }
+}
+

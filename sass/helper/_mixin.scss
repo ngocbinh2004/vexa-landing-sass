@@ -1,0 +1,93 @@
+// tạo 1 mixin để chiều chỉnh text
+// color, font-weight, font-size
+@mixin styleTest($color, $fw, $fs) {
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs;
+}
+
+@mixin styleButtonCircle($w, $h, $acitve-hover: true) {
+  border-radius: 50%;
+  background-color: $color-green-themes;
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  transition: all 0.3s;
+
+  @if $acitve-hover {
+    &::before {
+      background-color: white;
+      border-radius: 50%;
+      content: "";
+      opacity: 0;
+      visibility: hidden;
+      width: $w;
+      height: $h;
+      position: absolute;
+      bottom: -$h;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      background-color: unset;
+
+      &::before {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+  }
+
+  // padding = nhau về giá trị 4 hướng nội dung có chiều dài bằng chiều cao || width height
+}
+
+@mixin styleSwiperCircle($w, $h, $acitve-hover: true) {
+  border-radius: 50%;
+  // background-color: $color-green-themes;
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // position: relative;
+  overflow: hidden;
+  // border: none;
+  transition: all 0.3s;
+
+  @if $acitve-hover {
+    &::before {
+      background-color: $color-green-themes;
+      border-radius: 50%;
+      content: "";
+      opacity: 0;
+      visibility: hidden;
+      width: $w;
+      height: $h;
+      position: absolute;
+      bottom: -$h;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      background-color: unset;
+
+      &::before {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:after {
+        color: black;
+        position: relative;
+      }
+    }
+  }
+}

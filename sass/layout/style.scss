@@ -1,0 +1,14 @@
+// variable (biến)
+// Cấu hình các biến màu sắc và fs và font-weight sử dụng trong dự án
+@import './helper/variable';
+@import './helper/mixin';
+@import './base/base';
+@import './layout/header';
+@import './layout/aside';
+@import './layout/hero-banner';
+@import './layout/clients';
+@import './layout/project';
+@import './layout/meet-maker';
+@import './layout/testimonial';
+@import './layout/insight';
+@import './layout/footer';
